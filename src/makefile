@@ -1,5 +1,5 @@
 OBJS = main.cpp ScreenBuffer.cpp Snake.cpp
-FLAGS = -std=c++20
+FLAGS = -std=c++20 -lcurses
 CC = g++
 
 all:
