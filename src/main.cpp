@@ -154,7 +154,7 @@ void display(SnakeGame::ScreenBuffer & screen) {
 
 void microsleep(double microseconds) {
     #ifdef _WIN32 // Windows type system
-    Sleep(microseconds);
+    Sleep(microseconds / 1000);
     #else // Unix type system
     usleep(microseconds);
     #endif
