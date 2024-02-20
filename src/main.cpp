@@ -8,7 +8,7 @@ bool KILL_GAME;
 int INPUT_CHAR;
 
 /* You can mess with this if you want */
-const double MOVES_PER_SECOND = 1;
+const double MOVES_PER_SECOND = 2;
 const double TIME_SCALE_MIN = 0.0;
 const double TIME_SCALE_MAX = 6.0;
 double TIME_SCALE = 1.0;
@@ -119,6 +119,7 @@ void updateGame(SnakeGame::ScreenBuffer & screen, SnakeGame::Snake & snake) {
             // Grow Snake size. Delete Apple. Spawn new apple. Increase score?
             snake.grow();
             screen.removeApple(snake.getPosition().first, snake.getPosition().second);
+            TIME_SCALE *= 1.1;
             spawnApple(screen, snake);
         break;
 
